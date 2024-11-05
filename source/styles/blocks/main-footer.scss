@@ -1,0 +1,145 @@
+.main-footer {
+  min-height: 240px;
+  background-color: $bg-color;
+
+  @media screen and (min-width: $tablet-width) {
+    min-height: 0;
+  }
+}
+
+.main-footer__wrapper {
+  @include content-width;
+  @include flex (column, space-between, 0);
+  align-items: center;
+  background-color: $bg-color;
+
+
+  @media screen and (min-width: $tablet-width) {
+    @include flex (row, space-between, 20px);
+    padding: 58px 2px 50px 3px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    padding: 68px 2px 68px 0;
+  }
+}
+
+.main-footer__logo {
+  @include flex (row, center, 0);
+  width: 280px;
+  height: 24px;
+  padding: 42px 0 19px;
+  border-bottom: 1px solid $border-dark-line;
+
+  &:focus-visible {
+    outline: none;
+  }
+
+  &::before {
+    content: "";
+    width: 128px;
+    height: 24px;
+    background-color: $add-color;
+    mask-image: url("../../icons/stack.svg#logo-text");
+  }
+
+  &:hover::before,
+  &:focus-visible::before {
+    background-color: $add-focus;
+  }
+
+  &:active::before {
+    background-color: $add-focus;
+  }
+
+  @media screen and (min-width: $tablet-width) {
+    width: 128px;
+    border: none;
+    padding: 5px 0;
+    margin-right: 38px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    margin-top: -1px;
+    padding: 1px;
+  }
+}
+
+.main-footer__socials-list {
+  @include flex (row, center, 24px);
+  width: 280px;
+  list-style: none;
+  margin: 0;
+  padding: 20px 0;
+  border-bottom: 1px solid $border-dark-line;
+
+
+  @media screen and (min-width: $tablet-width) {
+    width: 132px;
+    border: none;
+    padding: 0;
+  }
+}
+
+.main-footer__socials-link {
+  display: block;
+  width: 28px;
+  height: 22px;
+
+  &:focus-visible {
+    outline: none;
+  }
+
+  &:hover::before,
+  &:focus-visible::before {
+    background-color: $corporate;
+  }
+
+  &:active::before {
+    background-color: rgba($corporate, 0.3);
+  }
+
+
+  &--vkontakte::before {
+    content: "";
+    width: 28px;
+    height: 22px;
+    display: block;
+    background-color: $link-color;
+    mask-image: url("../../icons/stack.svg#vkontakte");
+    mask-repeat: no-repeat;
+    mask-position: center;
+  }
+
+  &--youtube::before {
+    content: "";
+    width: 28px;
+    height: 22px;
+    display: block;
+    background-color: $link-color;
+    mask-image: url("../../icons/stack.svg#youtube");
+    mask-repeat: no-repeat;
+    mask-position: center;
+  }
+
+  &--telegram::before {
+    content: "";
+    width: 28px;
+    height: 22px;
+    display: block;
+    background-color: $link-color;
+    mask-image: url("../../icons/stack.svg#telegram");
+    mask-repeat: no-repeat;
+    mask-position: center;
+  }
+}
+
+.main-footer__logo-academy {
+  @include flex (row, space-between, 20px);
+  flex-wrap: nowrap;
+  text-decoration: none;
+
+  &:focus-visible {
+    outline: none;
+  }
+}

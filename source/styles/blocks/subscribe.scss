@@ -1,0 +1,183 @@
+.subscribe {
+  overflow: hidden;
+}
+
+.subscribe__title {
+  @include font;
+  font-size: 24px;
+  line-height: 24px;
+  padding: 10px 0 26px;
+  position: relative;
+  z-index: 1;
+  width: fit-content;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 20px;
+    right: calc(100% + 40px);
+    width: 100vw;
+    height: 2px;
+    background-color: $corporate;
+    z-index: -1;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: calc(100% + 40px);
+    width: 100vw;
+    height: 2px;
+    background-color: $corporate;
+    z-index: -1;
+  }
+
+  @media screen and (min-width: $tablet-width) {
+    font-size: 32px;
+    line-height: 32px;
+    padding: 9px 40px 56px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 23px;
+      right: 100%;
+      width: 100vw;
+      height: 2px;
+      background-color: $corporate;
+      z-index: -1;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 23px;
+      left: 100%;
+      width: 100vw;
+      height: 2px;
+      background-color: $corporate;
+      z-index: -1;
+    }
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    font-size: 40px;
+    line-height: 40px;
+    padding: 71px 0 63px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 89px;
+      right: calc(100% + 40px);
+      width: 100vw;
+      height: 2px;
+      background-color: $corporate;
+      z-index: -1;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 89px;
+      left: calc(100% + 40px);
+      width: 100vw;
+      height: 2px;
+      background-color: $corporate;
+      z-index: -1;
+    }
+  }
+}
+
+.subscribe__wrapper {
+  @include content-width;
+  margin-bottom: 40px;
+
+  @media screen and (min-width: $tablet-width) {
+    margin-bottom: 80px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    margin-bottom: 104px;
+  }
+}
+
+.subscribe__form {
+  @include flex (column, center, 20px);
+  gap: 16px;
+  justify-content: center;
+
+
+  @media screen and (min-width: $tablet-width) {
+    flex-direction: row;
+    gap: 0;
+  }
+}
+
+.subscribe__discription {
+  @include font;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  background-color: transparent;
+  padding: 5px 0 25px;
+
+
+  @media screen and (min-width: $tablet-width) {
+    font-size: 24px;
+    line-height: 32px;
+    padding: 10px 68px 24px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    text-align: center;
+  }
+}
+
+.subscribe__field {
+  @include font;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: $secondary-color;
+  background-color: transparent;
+  padding: 12px;
+  border: 1px solid $border-color;
+
+  &:hover {
+    border-color: $border-color;
+  }
+
+  &:focus-visible {
+    border-color: $secondary-color;
+  }
+
+  &::placeholder {
+    color: $secondary-color;
+  }
+
+  @media screen and (min-width: $tablet-width) {
+    width: 350px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    width: 471px;
+  }
+
+  &--error {
+    border-color: $error;
+  }
+}
+
+.button--subscribe {
+  border: none;
+  width: 100%;
+  font-size: 20px;
+  line-height: 26px;
+  padding: 15px;
+  box-sizing: border-box;
+
+  @media screen and (min-width: $tablet-width) {
+    width: 256px;
+  }
+}

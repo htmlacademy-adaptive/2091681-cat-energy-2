@@ -1,0 +1,85 @@
+.main-header {
+  padding: 13px 0 12px;
+
+  @media screen and (min-width: $tablet-width) {
+    @include flex (row, space-between, 10px);
+    align-items: start;
+
+    @include content-width;
+    background-color: $main-color;
+    border: none;
+    padding: 26px 0 7px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    padding: 1px 0;
+
+    &--bg {
+      position: absolute;
+      left: 0;
+      right: 0;
+      z-index: 4;
+      top: 53px;
+      background-color: transparent;
+    }
+  }
+}
+
+.main-header__logo {
+  width: 280px;
+  margin: 0 auto;
+
+  @include content-width;
+  @include flex (row,  flex-start, 56px);
+  align-self: start;
+  text-decoration: none;
+
+  &:hover,
+  &:focus-visible {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
+  @media screen and (min-width: $tablet-width) {
+    width: auto;
+    margin: 0;
+    gap: 13px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    gap: 14px;
+  }
+}
+
+.main-header__logo-text {
+  width: 101px;
+  height: 18px;
+  padding-top: 10px;
+  padding-right: 89px;
+
+  @media screen and (min-width: $tablet-width) {
+    padding-top: 15px;
+    padding-right: 0;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    width: 118px;
+    height: 21px;
+    padding-top: 19px;
+  }
+
+  &--catalog {
+    padding-top: 13px;
+
+    @media screen and (min-width: $tablet-width) {
+      padding-top: 15px;
+    }
+
+    @media screen and (min-width: $desktop-width) {
+      padding-top: 19px;
+    }
+  }
+}
